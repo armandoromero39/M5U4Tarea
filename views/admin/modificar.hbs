@@ -1,0 +1,21 @@
+<div class="login">
+    <div class="login-triangle"></div>
+
+    <h2 class="login-header">Modificar Novedad</h2>
+
+    <form action="/admin/novedades/modificar" method="post" class="login-container">
+        <input type="hidden" value="{{novedad.id}}" name="id">
+        <label for="">Título</label>
+        <p><input type="text" class="form-control" name="titulo" value="{{novedad.titulo}}"></p>
+        <Label for="">Subtítulo</Label>
+        <p><input type="text" class="form-control" name="subtitulo" value="{{novedad.subtitulo}}"></p>
+        <label for="">Cuerpo</label>
+        <p><textarea type="text" class="form-control" name="cuerpo">{{novedad.cuerpo}}</textarea></p>
+        <p><input type="submit" value="Modificar"></p>
+    </form>
+    
+    {{#if error}}
+    <p>{{message}}</p>
+    {{/if}}
+
+</div>
